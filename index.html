@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-pink-300 text-white p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">TaskFlow</div>
+    <ul class="flex gap-6 text-lg">
+      <li><a href="#" class="hover:underline" data-scroll-to="home">Home</a></li>
+      <li><a href="#" class="hover:underline" data-scroll-to="Features">Features</a></li>
+      <li><a href="#" class="hover:underline" data-scroll-to="Pricing">Pricing</a></li>
+      <li><a href="#" class="hover:underline" data-scroll-to="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden" id="home">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-beige-500 opacity-90"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-24 text-center text-white">
+      <h1 class="text-5xl font-extrabold">TaskFlow</h1>
+      <p class="mt-6 text-xl max-w-2xl mx-auto">
+        Streamline your workflow and boost productivity with our intuitive task management solution.
+      </p>
+      <div class="mt-10">
+        <a href="#" class="inline-flex items-center px-6 py-3 bg-white text-indigo-700 font-medium rounded hover:bg-indigo-100">
+          Get Started For Free
+          <svg class="ml-3 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M5 12h16" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="py-20 bg-white fade-in" id="Features">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold">Powerful Features</h2>
+      <p class="mt-4 text-gray-500">Everything you need to stay organized and productive</p>
+      <div class="mt-16 grid gap-12 md:grid-cols-3">
+        <div class="p-8 bg-gray-50 rounded-lg shadow">
+          <div class="text-indigo-500 text-3xl mb-4"><i class="fas fa-tasks"></i></div>
+          <h3 class="font-semibold text-lg">Intuitive Task Management</h3>
+          <p class="mt-2 text-gray-500">Easily create, organize, and prioritize tasks with a clean, drag-and-drop interface.</p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-lg shadow">
+          <div class="text-indigo-500 text-3xl mb-4"><i class="fas fa-users"></i></div>
+          <h3 class="font-semibold text-lg">Team Collaboration</h3>
+          <p class="mt-2 text-gray-500">Share projects, assign tasks, and communicate with your team in real-time.</p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-lg shadow">
+          <div class="text-indigo-500 text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+          <h3 class="font-semibold text-lg">Analytics Dashboard</h3>
+          <p class="mt-2 text-gray-500">Track your productivity with insightful statistics and progress reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-20 px-6 bg-gray-50 fade-in">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">What Our Users Say</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <blockquote class="bg-white p-6 rounded shadow">
+          <p class="italic">"TaskFlow changed how I work — smooth and fast!"</p>
+          <footer class="mt-4 font-bold">— Sarah M.</footer>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded shadow">
+          <p class="italic">"I love the intuitive design and how easy it is to use."</p>
+          <footer class="mt-4 font-bold">— Ali R.</footer>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded shadow">
+          <p class="italic">"Our whole team collaborates better with TaskFlow."</p>
+          <footer class="mt-4 font-bold">— Fatima A.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-20 px-6 fade-in" id="Pricing">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Choose Your Plan</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div  data-plan class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Free</h3>
+          <p class="text-3xl font-bold mb-4">$0</p>
+          <ul class="mb-4 space-y-2 text-sm">
+            <li>✓ Basic Tasks</li>
+            <li>✓ Single User</li>
+            <li>✓ Limited Storage</li>
+          </ul>
+          <button class="bg-indigo-500 text-white px-4 py-2 rounded">Sign Up</button>
+        </div>
+        <div  data-plan class="border p-6 rounded-lg shadow-lg bg-indigo-50">
+          <h3 class="text-xl font-semibold mb-4">Pro</h3>
+          <p class="text-3xl font-bold mb-4">$9.99/mo</p>
+          <ul class="mb-4 space-y-2 text-sm">
+            <li>✓ Unlimited Tasks</li>
+            <li>✓ Reminders</li>
+            <li>✓ Priority Support</li>
+          </ul>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded">Start Pro</button>
+        </div>
+        <div  data-plan class="border p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4">Team</h3>
+          <p class="text-3xl font-bold mb-4">$29.99/mo</p>
+          <ul class="mb-4 space-y-2 text-sm">
+            <li>✓ Team Collaboration</li>
+            <li>✓ Shared Projects</li>
+            <li>✓ Admin Dashboard</li>
+          </ul>
+          <button class="bg-indigo-500 text-white px-4 py-2 rounded">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 px-6 fade-in" id="contact">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Contact Us</h4>
+        <p>Email: support@taskflow.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+      <div class="flex space-x-4 text-xl">
+        <a href="#"><i class="fab fa-facebook-f hover:text-pink-400"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-pink-400"></i></a>
+        <a href="#"><i class="fab fa-instagram hover:text-pink-400"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in hover:text-pink-400"></i></a>
+      </div>
+    </div>
+    <p class="text-center text-sm mt-6 text-gray-400">© 2025 TaskFlow. All rights reserved.</p>
+  </footer>
+
+
+  <script src="./js/index.js"></script>
